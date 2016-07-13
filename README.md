@@ -3,6 +3,10 @@ Use `7z` compress or extract `zip` archive for Windows
 
 ## Install
 
+**Node.js 4 or higher**
+
+    $ npm install win-7z --save
+
 ## Usage
 
 ```js
@@ -22,7 +26,18 @@ win7z.unzip(path.join(__dirname, 'test.zip'), path.join(__dirname, 'test')).then
 
 ## API
 
-- zip
-- zipSync
-- unzip
-- unzipSync
+- win7z.zip(archivePath, filePath)
+
+  Add files to archive
+
+- win7z.zipSync(archivePath, filePath)
+
+  Synchronous version of `zip`
+
+- win7z.unzip(archivePath, filePath)
+
+  Extract files from archive
+
+- win7z.unzipSync(archivePath, filePath)
+
+  Synchronous version of `unzip`
